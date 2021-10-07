@@ -75,13 +75,13 @@ Image gradients will be a tool to help us compute edges in an image.
 ### Derivatives in One Dimension 
 The derivative of a function \\(f(x)\\) computes the rate of change of the function. 
 
-<div align="center">\\[\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x) - f(\Delta x - x)}{\Delta x} = f'(x)\\]</div>
+\\[\frac{\partial f}{\partial x} = \lim_{\Delta x \to 0} \frac{f(x) - f(\Delta x - x)}{\Delta x} = f'(x)\\]
 
 Images are not continious functions, they are discrete. Therefore the minimum value that \\(\Delta x\\) can take is 1. The best we can do is to approximate the derivative for a discrete function. To do that, instead of taking the limit we calculate finite differences along one dimension of the function. 
 
-<div align="center">\\[\frac{\partial f}{\partial x} =  \frac{f(x) - f(x-1)}{1} = f'(x)\\]</div>
+\\[\frac{\partial f}{\partial x} =  \frac{f(x) - f(x-1)}{1} = f'(x)\\]
 
-<div align="center">\\[\frac{\partial f}{\partial x} = f(x) - f(x-1) = f'(x)\\]</div>
+\\[\frac{\partial f}{\partial x} = f(x) - f(x-1) = f'(x)\\]
 
 Therefore, the derivative of a discrete function \\(f\\) can be approximated as a finite difference between two consecutive values of the function. 
 
@@ -103,21 +103,21 @@ There are different ways that we can approximate the derivative of a one dimensi
 We can also implement the derivatives as filters with convolutions.  
 - Backward 
 
-  [ 0 1 -1]
+  \\[[ 0 1 -1]\\]
 - Forward
 
-  [ 1 -1 0]
+  \\[[ 1 -1 0]\\]
 
 - Central 
 
-  [ 1 0 -1]
+  \\[[ 1 0 -1]\\]
 
 To compute the backward, forward or central derivative we use the corresponding kernel and perform convolution with the function. 
 
 ### Discrete Derivatives in Two Dimensions 
 Since images are in two dimensions, it is important to understand how to compute discrete derivatives for two dimensiononal functions.
 
-The derivative of a two dimensional function \(f(x,y)\) , called gradient vector, computes the rates of change along the x-dimension and along the y-dimension. 
+The derivative of a two dimensional function \\(f(x,y)\\) , called gradient vector, computes the rates of change along the x-dimension and along the y-dimension. 
 - Gradient vector
 \\[\nabla f(x,y)=\left[\begin{array}{c}
 \dfrac{\partial f(x,y)}{\partial x}
@@ -129,13 +129,13 @@ Since the gradient is a vector, we can compute how strong the derivative is by c
 
 - Gradient magnitude 
 
-<div align="center">\\[|\nabla f(x,y)|= \sqrt{f_x^2 + f_y^2}\\]</div>
+\\[|\nabla f(x,y)|= \sqrt{f_x^2 + f_y^2}\\]
 
 
 We can also compute the gradient orientation that tells us the direction along which the gradient is strongest. 
 - Gradient direction
 
-<div align="center">\\[\theta = \tan^{-1}(\frac{df}{dy}/\frac{df}{dx})\\]</div>
+\\[\theta = \tan^{-1}(\frac{df}{dy}/\frac{df}{dx})\\]
 
 ### Two Dimensional Derivative Filters 
 
@@ -143,15 +143,15 @@ To compute the two dimensional gradients we use filters to perform convolutions.
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***x-direction***. 
 
-<div align="center">\\[\frac{1}{3} \left[ {\begin{array}{ccc} 1 & 0 & -1 \\
+\\[\frac{1}{3} \left[ {\begin{array}{ccc} 1 & 0 & -1 \\
 1 & 0 & -1 \\
-1 & 0 & -1\end{array} } \right]\\]</div>
+1 & 0 & -1\end{array} } \right]\\]
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***y-direction***. 
 
-<div align="center">\\[\frac{1}{3} \left[ {\begin{array}{ccc} 1 & 1 & 1 \\
+\\[\frac{1}{3} \left[ {\begin{array}{ccc} 1 & 1 & 1 \\
 0 & 0 & 0 \\
--1 & -1 & -1\end{array} } \right]\\]</div>
+-1 & -1 & -1\end{array} } \right]\\]
 
 An example that includes perfoming convolution with both pre-mentioned filters can be seen below. 
 ![](https://drive.google.com/uc?export=view&id=10g8SconSE6T6CJQ0NTz7olv_9cjoKz96)
@@ -196,7 +196,7 @@ As shown below, to find edges, look for peaks in \\(\frac{d}{dx}(f * g)\\)
 Alternatively, we can use a special theorem to save one operation: 
 
 **(Theorem)** Derivative Theorem of Convolution 
-<div align="center"> \\[\frac{d}{dx}(f * g) = f *\frac{d}{dx} g \\] </div>
+\\[\frac{d}{dx}(f * g) = f *\frac{d}{dx} g \\]
 
 1. get your image function f 
 2. get the differentiated version of the kernel of the smoothing filter
