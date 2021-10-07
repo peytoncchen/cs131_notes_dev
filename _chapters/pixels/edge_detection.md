@@ -1,6 +1,10 @@
-# <div align="center"> CS131 Lecture 4 </div>
-### <div align="center"> Stanford University </div>
-<div align="center"> Peyton Chen, Michelle Xing, Sotirios Papasotiriou, Edgar Roman, Jay Saleh, Alex Oseguera </div>
+---
+title: Edge detection
+keywords: (insert comma-separated keywords here)
+order: 4 # Lecture number for 2020
+---
+
+Peyton Chen, Michelle Xing, Sotirios Papasotiriou, Edgar Roman, Jay Saleh, Alex Oseguera
 
 # 4.1 Overview of Edge Detection
 
