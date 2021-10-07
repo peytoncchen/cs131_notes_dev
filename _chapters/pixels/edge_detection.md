@@ -1,6 +1,6 @@
 ---
 title: Edge detection
-keywords: (insert comma-separated keywords here)
+keywords: Edge Detection Overview, Motivation, History of Edges, Image Gradients, Gradients in 1D, 2D discrete Gradients, Simple Edge Detector, Smoothing Kernels, Good Edge Detector Design, Sobel Edge Dectector, Canny Edge Detector, Hough Transform for Line Detection
 order: 4 # Lecture number for 2020
 ---
 
