@@ -162,22 +162,22 @@ An example that includes perfoming convolution with both pre-mentioned filters c
 
 **(Definition)** edge: a place of rapid change in the image intensity function 
 
-<img src="{{ site.baseurl }}/assets/images/img10.png" width="600">
+<img src="{{ site.baseurl }}/assets/images/img10.jpg" width="600">
 
 - the edge direction is given by the direction of the gradient vector \\(\theta = \tan^{-1}(\frac{df}{dy}/\frac{df}{dx})\\) since it points in the direction of the most rapid increase in intensity 
 - the edge strength is given by the gradient magnitude \\(\sqrt{(\frac{df}{dy})^2 + (\frac{df}{dx})^2}\\)
 
 **(Example)** detecting edges in a real image
 
-<img src="{{ site.baseurl }}/assets/images/img11.png" width="600">
+<img src="{{ site.baseurl }}/assets/images/img11.jpg" width="600">
 
 ### Effects of Noise 
 **(Question)** What if we have a noisy image? 
-<img src="{{ site.baseurl }}/assets/images/img12.png" width="600">
+<img src="{{ site.baseurl }}/assets/images/img12.jpg" width="600">
 
 - problem: discrete gradient filters respond strongly to noise 
  - in the image below, see that it's hard to determine where the extremas of the derivative/gradient function are, thus hard to locate where the edge is 
-<img src="{{ site.baseurl }}/assets/images/img13.png" width="600">
+<img src="{{ site.baseurl }}/assets/images/img13.jpg" width="600">
 
 - solution: smoothing filters 
  - how? filters force pixels to look more like neighbors, removing noise 
@@ -206,11 +206,11 @@ Alternatively, we can use a special theorem to save one operation:
 
 **(Question)** What does the derivative of a smoothing filter look like? 
 
-<img src="{{ site.baseurl }}/assets/images/img15.png" width="600">
+<img src="{{ site.baseurl }}/assets/images/img15.jpg" width="600">
 
 - N.B. tradeoff between smoothing and localization: larger Gaussian kernel size removes more noise, but blurs edges 
 
-<img src="{{ site.baseurl }}/assets/images/img16.png" width="600">
+<img src="{{ site.baseurl }}/assets/images/img16.jpg" width="600">
 
 #### Designing an Edge Detector 
 - good edge detection: minimize false positives and false negatives
