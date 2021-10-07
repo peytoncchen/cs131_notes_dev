@@ -149,7 +149,7 @@ $$\frac{1}{3} {\begin{bmatrix} 1 & 0 & -1 \\
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***y-direction***. 
 
-$$[\frac{1}{3}{\begin{bmatrix} 1 & 1 & 1 \\
+$$\frac{1}{3}{\begin{bmatrix} 1 & 1 & 1 \\
 0 & 0 & 0 \\
 -1 & -1 & -1\end{bmatrix} } $$
 
