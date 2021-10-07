@@ -154,7 +154,7 @@ $$[\frac{1}{3}{\begin{bmatrix} 1 & 1 & 1 \\
 -1 & -1 & -1\end{bmatrix} } $$
 
 An example that includes perfoming convolution with both pre-mentioned filters can be seen below. 
-![](https://drive.google.com/uc?export=view&id=10g8SconSE6T6CJQ0NTz7olv_9cjoKz96)
+<img src="{{ site.baseurl }}/assets/images/img9.png" width="600">
 
 # 4.3 A Simple Edge Detector
 
@@ -162,22 +162,22 @@ An example that includes perfoming convolution with both pre-mentioned filters c
 
 **(Definition)** edge: a place of rapid change in the image intensity function 
 
-![](https://drive.google.com/uc?export=view&id=1WVcw2doPnx7JILS32oCDUhAnFxtZuW3A)
+<img src="{{ site.baseurl }}/assets/images/img10.png" width="600">
 
 - the edge direction is given by the direction of the gradient vector \\(\theta = \tan^{-1}(\frac{df}{dy}/\frac{df}{dx})\\) since it points in the direction of the most rapid increase in intensity 
 - the edge strength is given by the gradient magnitude \\(\sqrt{(\frac{df}{dy})^2 + (\frac{df}{dx})^2}\\)
 
 **(Example)** detecting edges in a real image
 
-![](https://drive.google.com/uc?export=view&id=1Oqyl2BKWcFRvbKmOXahqKYBVUSfaQa14)
+<img src="{{ site.baseurl }}/assets/images/img11.png" width="600">
 
 ### Effects of Noise 
 **(Question)** What if we have a noisy image? 
-![](https://drive.google.com/uc?export=view&id=1hwCYDFk7bu8MIzvJpyznPtY_21MkI1GV)
+<img src="{{ site.baseurl }}/assets/images/img12.png" width="600">
 
 - problem: discrete gradient filters respond strongly to noise 
  - in the image below, see that it's hard to determine where the extremas of the derivative/gradient function are, thus hard to locate where the edge is 
-![](https://drive.google.com/uc?export=view&id=1Z9zPvLDB8jDslE4cpKEON9a0hyLa974K)
+<img src="{{ site.baseurl }}/assets/images/img13.png" width="600">
 
 - solution: smoothing filters 
  - how? filters force pixels to look more like neighbors, removing noise 
@@ -202,15 +202,15 @@ Alternatively, we can use a special theorem to save one operation:
 2. get the differentiated version of the kernel of the smoothing filter
 3. apply this new kernel to f 
 
-![](https://drive.google.com/uc?export=view&id=1D3qn8pGFRrkreMQs6JwHd8xlLH7rw9vO)
+<img src="{{ site.baseurl }}/assets/images/img14.png" width="600">
 
 **(Question)** What does the derivative of a smoothing filter look like? 
 
-![](https://drive.google.com/uc?export=view&id=1oaAopjRnrGBK1gHxv2AdYIdDUDNlawFK)
+<img src="{{ site.baseurl }}/assets/images/img15.png" width="600">
 
 - N.B. tradeoff between smoothing and localization: larger Gaussian kernel size removes more noise, but blurs edges 
 
-![](https://drive.google.com/uc?export=view&id=1w0ZH11cL7ZLfQhm-lDV7r7-nrLCOj8cy)
+<img src="{{ site.baseurl }}/assets/images/img16.png" width="600">
 
 #### Designing an Edge Detector 
 - good edge detection: minimize false positives and false negatives
@@ -223,23 +223,23 @@ Alternatively, we can use a special theorem to save one operation:
 
 The sobel transform uses two 3x3 kernels which are convolved with the original image to calculate approximations of the derivatives of the image. The two kernels are one for horizontal changes and one for vertical changes respectively. 
 
-![](https://drive.google.com/uc?export=view&id=1REqxLG0XFCcteH35frnL5UHpdXe4Isi2)
+<img src="{{ site.baseurl }}/assets/images/img17.png" width="600">
 
 The matrices themselves are created from a combination of gaussian smoothing matrices with differentiation matrices in order to create the final 3x3 matrix. This is done in order to provide the smoothing neccessary to deal with noise in images. 
 
-![](https://drive.google.com/uc?export=view&id=14b4rJpiw0QjCoJDxzPzhf34ynSX5RMnG)
+<img src="{{ site.baseurl }}/assets/images/img18.png" width="600">
 
 ### Sobel Transform Problems
 
 Although Sobel Transform is a simple filter to implement it does have issues. For one, it has poor localization which means that the detector responds multiple times for a single true edge. Additionally, performing thresholding favors certain directions over others. Specifically, the detector tends to miss diagonal edges more than horizontal or vertical edges. Finally, it is more susceptible to false negatives.
 
-![](https://drive.google.com/uc?export=view&id=1j8cBFIvW4uTDqllbgX8ylPAdDZG7CInt)
+<img src="{{ site.baseurl }}/assets/images/img19.png" width="600">
 
 # 4.5 Canny Edge Detector
 
-![](https://drive.google.com/uc?export=view&id=1veGlSf3AioDLvWh_6ehhz3oxbnnucT1s)
+<img src="{{ site.baseurl }}/assets/images/img20.png" width="600">
 
-Final Canny Edges
+(Final Canny Edges)
 
 ## Overview
 
@@ -247,7 +247,7 @@ Final Canny Edges
 
 - Theoretical Model: The Canny Edge Detector assumes that edges are step functions that have been corrupted by additive Gaussian noise.
 
-![](https://drive.google.com/uc?export=view&id=1cOiYCoJly1iVhiF5bhjsXhdxthY9MwTP)
+<img src="{{ site.baseurl }}/assets/images/img21.png" width="600">
 
 - Canny has shown that the first derivative of the Gaussian closely approximates the operator that optimizes the product of signal-to-noise ratio and localization
 
@@ -255,13 +255,13 @@ Final Canny Edges
 
 - Supress Noise & Compute Magnitude and Direction
 
-![](https://drive.google.com/uc?export=view&id=1KUbIjVIbq0aZxnlU_-wlfpru7WnLIepP)
+<img src="{{ site.baseurl }}/assets/images/img22.png" width="600">
 
-![](https://drive.google.com/uc?export=view&id=1MuHWsF6gym277rmG5aG0jSXnHzRdj3lD)
+<img src="{{ site.baseurl }}/assets/images/img23.png" width="600">
 
-![](https://drive.google.com/uc?export=view&id=13Ln9R77ne1clLWuKu4VwH8n2bGO5_7Pm)
+<img src="{{ site.baseurl }}/assets/images/img24.png" width="600">
 
-![](https://drive.google.com/uc?export=view&id=1RN3023P9Agvq9g3MYZUX-peeK5C3WKDW)
+<img src="{{ site.baseurl }}/assets/images/img25.png" width="600">
 
 - Apply Non-Maximum Supression
   - As we can see above, we have an issue of too many pixels with a strong response. We can fix it by thinning multi-pixel wide "ridges" down to a single pixel width.
@@ -269,9 +269,9 @@ Final Canny Edges
   - So, we supress non-maximum gradient regardless of if it passes threshold
   - We do so by comparing the current pixel to its neighbors along the direction of the gradient, removing it if it is not the maximum. 
 
-![](https://drive.google.com/uc?export=view&id=1ls13I83aMgz36_wgAoJVND2iV0CoP7W2)
+<img src="{{ site.baseurl }}/assets/images/img26.png" width="600">
 
-![](https://drive.google.com/uc?export=view&id=1FBsCKp6hs3XGQMWofzjlPWEOjz-s9Nyp)
+<img src="{{ site.baseurl }}/assets/images/img27.png" width="600">
 
   <b>Note:</b> We will only remove non-maximum gradients along the direction of the gradient vector and not along the edge itself.
 
@@ -282,12 +282,12 @@ Final Canny Edges
   - Calculate the intensity value of <i>r</i> and <i>p</i> by using their neighboring pixels
   - Perform non-maximum supression between the gradient value at <i>q</i> with the interpolated values obtained at points <i>r</i> and <i>p</i>
 
-![](https://drive.google.com/uc?export=view&id=1Fxht9yj91QQXqW-moR636lMdPaLJWkv7)
+<img src="{{ site.baseurl }}/assets/images/img28.png" width="600">
 
 - Use Hysteresis & Connectivity Analysis to Detect Edges
   - In order to produce an edge map, we need to use a threshold to identify the final edge pixels; However, using a single threshold is suboptimal.
 
-  ![](https://drive.google.com/uc?export=view&id=1uz8GNcNMpOfbtmvMFXrm5WhnQeEuxYtB)
+  <img src="{{ site.baseurl }}/assets/images/img29.png" width="600">
 
   - The solution: Hysteresis Thresholding
     - Avoid streaking near threshold value
@@ -296,13 +296,13 @@ Final Canny Edges
       - If greater than High, then strong edge
       - If between Low and High, then weak Edge
         - Consider its neighbors iteratively. Then, declare it an “edge pixel” if it is connected to a “strong edge pixel” directly or via other “weak edge pixels”
-    ![](https://drive.google.com/uc?export=view&id=13-kLptCvyH8ZQPDrIgHiF0ubn_OyeMzf)
+    <img src="{{ site.baseurl }}/assets/images/img30.png" width="600">
 
 ## Additional Notes
 
 ### Effect of \\(\sigma\\) (Gaussian kernel spread/size)
 
-![](https://drive.google.com/uc?export=view&id=10hMiiCpuipofvlGbR-gXZ7LIjH1Hmtv4)
+<img src="{{ site.baseurl }}/assets/images/img31.png" width="600">
 
 - Large \\(\sigma\\) detects large scale feautures
 - Small \\(\sigma\\) detects fine features
@@ -311,7 +311,7 @@ Final Canny Edges
 
 - In order to quantify the algorithm's performance, we can compare how well the output of the algorithm matches the desired output for a given image. For example, we may compare the output to an edge map drawn by a human.
 
-![](https://drive.google.com/uc?export=view&id=1DCytYQKGr3MD23XdhToktBWy5hL2YMbO)
+<img src="{{ site.baseurl }}/assets/images/img32.png" width="600">
 
 
 # 4.6 Hough Transform for Line Detection
@@ -319,7 +319,7 @@ Final Canny Edges
 ### Why Line Detection and Hough Transform vs. Edge Detection
 There are many objects that can be characterized by the presence of straight lines. For example, we may want to do an analysis on 3-dimensional shapes like buildings, or you need to do quality control in a manufacturing components. You may also need to navigate sidewalks and need to find out where the boundaries of the sidewalk are.
 
-![](https://drive.google.com/uc?export=view&id=1_m9AGskYds8XDLM-vueJYT64h2aYIgUR)
+<img src="{{ site.baseurl }}/assets/images/img33.png" width="600">
 
 This is _**not**_ what edge detection does. Edge detection can give us edge maps that can tell us which pixels belong to which boundaries. But, it does not tell us anything about the shape of those boundaries or what shapes those pixels form. This is where Hough transform comes in.
 
@@ -334,7 +334,7 @@ Important things to note for Hough transform is that it can give quite robust de
 ### Prior to Hough transform
 Let's establish our input. Assume that we have performed edge detection, for example, by thresholding the gradient magnitude image. Therefore, we have some pixels that may partially describe the boundary of some objects in an edge map. This edge map is a binary image where edge pixels are one and non-edge pixels are zero.
 
-![](https://drive.google.com/uc?export=view&id=1Lm7BspSaZ74Kt4HSW5Yu6dPTOiCfwP1i)
+<img src="{{ site.baseurl }}/assets/images/img34.png" width="600">
 
 ### Naïve Line Detection
 One simple algorithm for line detection would be to:
@@ -343,7 +343,7 @@ One simple algorithm for line detection would be to:
   - Check if there are other pixels that satisfy this equation
   - In some cases, we can see that these are the only 2 points, then we discard this line. In other cases like the image below, we see that there are in fact a lot of other points that satisfy the equation and so you can declare that this is a true line in the image.
 
-![](https://drive.google.com/uc?export=view&id=1Dk5aa3f6TzZpDlUL0G4gM4kvFeqnegYU)
+<img src="{{ site.baseurl }}/assets/images/img35.png" width="600">
   - Complexity is O(N<sup>2</sup>) for an image with N edge pixels which is quite expensive for high-resolution images. Of course, we can do better than this.
 
 
@@ -353,15 +353,15 @@ One simple algorithm for line detection would be to:
     - There are many _potential_ lines passing through this point (x<sub>i</sub>, y<sub>i</sub>) and these lines all have the form y<sub>i</sub> = a*x<sub>i</sub> + b.
     - When looking at this equation, we note that for a known point (x<sub>i</sub>, y<sub>i</sub>), these are constants, while a and b can change. This means we will want to interpret this as giving rise to a new space where (a, b) are the variables. 
     - When considering different points (a, b), we can see that all of these points are colinear. They are colinear because they have to satisfy the same equation we had in the beginning y<sub>i</sub> = a*x<sub>i</sub> + b. 
-    ![](https://drive.google.com/uc?export=view&id=1j_fSK-RyS-ihk8RrstK4BNdpHMLxJJu6)
+    <img src="{{ site.baseurl }}/assets/images/img36.png" width="600">
     - As seen in the image above, we can make this equation more explicit by taking our original point (x<sub>i</sub>, y<sub>i</sub>) and transforming it into a line in the (a, b) space and the equation of this line will be b = -a*x<sub></sub>i + y<sub>i</sub>.
   - Adding another edge point (x<sub>2</sub>, y<sub>2</sub>) in our original space will cause another line to show up in the (a, b) space
-    ![](https://drive.google.com/uc?export=view&id=1sUPbxxjFe7KL_IENpFrDT2Cc7TIPZ17N)
+    <img src="{{ site.baseurl }}/assets/images/img37.png" width="600">
     - This will cause both of these lines to intersect in the (a, b) space at a point (a', b')
     - Futhermore, this causes a line (y = a'*x + b') to a appear between (x<sub>i</sub>, y<sub>i</sub>) and (x<sub>2</sub>, y<sub>2</sub>)
     - Next, we would need to find the intersection points in the (a, b) space
 by quantizing the lines
-    ![](https://drive.google.com/uc?export=view&id=1LVVEM9_15Qbguoqd82NfRURSqoqsRe70)
+    <img src="{{ site.baseurl }}/assets/images/img38.png" width="600">
     - For every box in the quantized space, we add a one for he count of the number of lines that cross that space.
     - Each cell that have more counts than the number of threshold and use the paramters of that cell to make the correspoding (a, b) line
 
