@@ -16,7 +16,7 @@ We can think of edges as significant local changes in an image. Edges often occu
 
 Edges are represented through normal lines as well as lines that are seen in drawings, paintings and pictures. With these edges, we are provided a way to communicate with each other as well as express ourselves culturally. Additionally, edges convey meaning about scenes and objects that allow us to navigate the world. 
 
-<img src="{{ site.baseurl }}/assets/images/img1.png">
+<img src="{{ site.baseurl }}/assets/images/img1.png" width="600">
 
 ### Edges and Biology
 
