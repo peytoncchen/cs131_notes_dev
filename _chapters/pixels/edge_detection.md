@@ -143,15 +143,15 @@ To compute the two dimensional gradients we use filters to perform convolutions.
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***x-direction***. 
 
-\\[\frac{1}{3} \left[ {\begin{bmatrix} 1 & 0 & -1 \\
+\\[\frac{1}{3} {\begin{bmatrix} 1 & 0 & -1 \\
 1 & 0 & -1 \\
-1 & 0 & -1\end{bmatrix} } \right]\\]
+1 & 0 & -1\end{bmatrix} }\\]
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***y-direction***. 
 
-\\[\frac{1}{3} \left[ {\begin{bmatrix} 1 & 1 & 1 \\
+\\[\frac{1}{3}{\begin{bmatrix} 1 & 1 & 1 \\
 0 & 0 & 0 \\
--1 & -1 & -1\end{bmatrix} } \right]\\]
+-1 & -1 & -1\end{bmatrix} } \\]
 
 An example that includes perfoming convolution with both pre-mentioned filters can be seen below. 
 ![](https://drive.google.com/uc?export=view&id=10g8SconSE6T6CJQ0NTz7olv_9cjoKz96)
