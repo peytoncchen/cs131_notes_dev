@@ -16,7 +16,7 @@ We can think of edges as significant local changes in an image. Edges often occu
 
 Edges are represented through normal lines as well as lines that are seen in drawings, paintings and pictures. With these edges, we are provided a way to communicate with each other as well as express ourselves culturally. Additionally, edges convey meaning about scenes and objects that allow us to navigate the world. 
 
-![](https://drive.google.com/uc?export=view&id=1Cdl6pp5JbZWH0fgvibrfLZIu2SVpzsj0)
+<img src="{{ site.baseurl }}/assets/images/img1.png">
 
 ### Edges and Biology
 
@@ -26,16 +26,16 @@ One of the most famous studies is one done by Hubel and Wiesel in the 1950's and
 
 Hubel and Wiesel Experiment Image:
 
-![](https://drive.google.com/uc?export=view&id=1NUKoSfCG3bDQ411lHJCcd90OlzEeQrXo)
+<img src="{{ site.baseurl }}/assets/images/img2.png">
 
 However, not all edges are equal in the human visual system. In a research study done by Biederman, researchers divided a drawing made only of edges into equal parts, so that each part was roughly 50 percent of the edges and the sum of its parts would make up the original drawing. Human subjects were then asked to name the objects from only one of the parts deleted complimentary images.
 It turns out the ability to name was very dependent on which half was shown to them
 
-![](https://drive.google.com/uc?export=view&id=1z6NPrve7bBWjAA-nMBMpGL0OxHBEnqwb)
+<img src="{{ site.baseurl }}/assets/images/img3.png">
 
 In yet another study in neuroscience, people were placed in FMRI scanners and shown natural images of scenes. They would then capture the brain responses of the subjects from seeing these images and feed the response to an algorithm that would take the brain activity and guess what type of image the subjects were looking at. Then, they took those same images but instead generated the image with only edges (i.e removing color and other detail), showed them to the subjects and once again had the algorithm guess which image the subjects were looking at. They found that the algorithm was able to guess just as well using edge images as it was with fully detailed images, showing the brains affinity for edge detection.
 
-![](https://drive.google.com/uc?export=view&id=1fxdeSfQHA2I4l9jLHhpiqedFq1VY7XED)
+<img src="{{ site.baseurl }}/assets/images/img4.png">
 
 ### What is the goal of edge detection? 
 
