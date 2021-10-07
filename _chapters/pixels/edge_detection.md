@@ -1,5 +1,9 @@
-# CS131 Lecture 4 
-### Stanford University 
+---
+title: Edge detection
+keywords: (insert comma-separated keywords here)
+order: 4 
+---
+### CS131 Stanford University 
 Peyton Chen, Michelle Xing, Sotirios Papasotiriou, Edgar Roman, Jay Saleh, Alex Oseguera
 
 # 4.1 Overview of Edge Detection
