@@ -26,16 +26,16 @@ One of the most famous studies is one done by Hubel and Wiesel in the 1950's and
 
 Hubel and Wiesel Experiment Image:
 
-<img src="{{ site.baseurl }}/assets/images/img2.png">
+<img src="{{ site.baseurl }}/assets/images/img2.png" width="600">
 
 However, not all edges are equal in the human visual system. In a research study done by Biederman, researchers divided a drawing made only of edges into equal parts, so that each part was roughly 50 percent of the edges and the sum of its parts would make up the original drawing. Human subjects were then asked to name the objects from only one of the parts deleted complimentary images.
 It turns out the ability to name was very dependent on which half was shown to them
 
-<img src="{{ site.baseurl }}/assets/images/img3.png">
+<img src="{{ site.baseurl }}/assets/images/img3.png" width="600">
 
 In yet another study in neuroscience, people were placed in FMRI scanners and shown natural images of scenes. They would then capture the brain responses of the subjects from seeing these images and feed the response to an algorithm that would take the brain activity and guess what type of image the subjects were looking at. Then, they took those same images but instead generated the image with only edges (i.e removing color and other detail), showed them to the subjects and once again had the algorithm guess which image the subjects were looking at. They found that the algorithm was able to guess just as well using edge images as it was with fully detailed images, showing the brains affinity for edge detection.
 
-<img src="{{ site.baseurl }}/assets/images/img4.png">
+<img src="{{ site.baseurl }}/assets/images/img4.png" width="600">
 
 ### What is the goal of edge detection? 
 
@@ -52,22 +52,22 @@ Edges in images are normally produced by discontinuities found in images. Some o
 Surface normal discontinuity:  
 - This happens when two surfaces that have different normal vectors intersect. In this case we see two surfaces that are perpendicular to each other and therefore they form an edge
 
-![](https://drive.google.com/uc?export=view&id=16bZP72dbWTdZfMTPZW5MrertFwhwbNzD)
+<img src="{{ site.baseurl }}/assets/images/img5.png" width="600">
 
 Depth discontinuity:  
 - In this case, one region in the image has a much different depth than the other 
 
-![](https://drive.google.com/uc?export=view&id=1rNYkDGxbFSTpN9fACsIFHLOBnuyoE5-O)
+<img src="{{ site.baseurl }}/assets/images/img6.png" width="600">
 
 Surface Color discontinuity:  
 - In this case we see that some color of the surface is different from other colors on the surface
 
-![](https://drive.google.com/uc?export=view&id=1r4nzf_uMDuBS1stY1kv9BlVUWfuAV_uL)
+<img src="{{ site.baseurl }}/assets/images/img7.png" width="600">
 
 Illumination Discontinuity:  
 - In this case there is a shadow which is caused by differences in illumination. 
 
-![](https://drive.google.com/uc?export=view&id=1Ma9HiAqjWcEgj2qDkP_2CaZfGdVxrqsq)
+<img src="{{ site.baseurl }}/assets/images/img8.png" width="600">
 
 
 # 4.2 Image Gradient 
