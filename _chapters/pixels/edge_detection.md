@@ -103,14 +103,14 @@ There are different ways that we can approximate the derivative of a one dimensi
 We can also implement the derivatives as filters with convolutions.  
 - Backward 
 
-  \\[[ 0 1 -1]\\]
+  [ 0 1 -1]
 - Forward
 
-  \\[[ 1 -1 0]\\]
+  [ 1 -1 0]
 
 - Central 
 
-  \\[[ 1 0 -1]\\]
+  [ 1 0 -1]
 
 To compute the backward, forward or central derivative we use the corresponding kernel and perform convolution with the function. 
 
