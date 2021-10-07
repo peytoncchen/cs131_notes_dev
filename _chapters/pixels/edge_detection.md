@@ -129,7 +129,7 @@ Since the gradient is a vector, we can compute how strong the derivative is by c
 
 - Gradient magnitude 
 
-\\[|\nabla f(x,y)|= \sqrt{f_x^2 + f_y^2}\\]
+\\[\nabla f(x,y) = \sqrt{f_x^2 + f_y^2}\\]
 
 
 We can also compute the gradient orientation that tells us the direction along which the gradient is strongest. 
@@ -143,15 +143,15 @@ To compute the two dimensional gradients we use filters to perform convolutions.
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***x-direction***. 
 
-\\[\frac{1}{3} \left[ {\begin{array}{ccc} 1 & 0 & -1 \\
+\\[\frac{1}{3} \left[ {\begin{bmatrix} 1 & 0 & -1 \\
 1 & 0 & -1 \\
-1 & 0 & -1\end{array} } \right]\\]
+1 & 0 & -1\end{bmatrix} } \right]\\]
 
 Performing convolution with the following filter gives us an approximation of the derivative along the ***y-direction***. 
 
-\\[\frac{1}{3} \left[ {\begin{array}{ccc} 1 & 1 & 1 \\
+\\[\frac{1}{3} \left[ {\begin{bmatrix} 1 & 1 & 1 \\
 0 & 0 & 0 \\
--1 & -1 & -1\end{array} } \right]\\]
+-1 & -1 & -1\end{bmatrix} } \right]\\]
 
 An example that includes perfoming convolution with both pre-mentioned filters can be seen below. 
 ![](https://drive.google.com/uc?export=view&id=10g8SconSE6T6CJQ0NTz7olv_9cjoKz96)
@@ -239,7 +239,7 @@ Although Sobel Transform is a simple filter to implement it does have issues. Fo
 
 ![](https://drive.google.com/uc?export=view&id=1veGlSf3AioDLvWh_6ehhz3oxbnnucT1s)
 
-<div align="center"> Final Canny Edges </div>
+Final Canny Edges
 
 ## Overview
 
